@@ -1,0 +1,22 @@
+@font-face {
+     font-family: 'Courier Prime';
+     font-style: normal;
+     font-weight: 400;
+     src: local('Courier Prime Regular'), local('CourierPrime-Regular'),
+          url('./fonts/courier-prime-v1-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('./fonts/courier-prime-v1-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+  
+  /* fredoka-one-regular - latin */
+  @font-face {
+       font-family: 'Fredoka One';
+       font-style: normal;
+       font-weight: 400;
+       src: url('./fonts/fredoka-one-v7-latin-regular.eot'); /* IE9 Compat Modes */
+       src: local('Fredoka One'), local('FredokaOne-Regular'),
+            url('./fonts/fredoka-one-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/fredoka-one-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/fredoka-one-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/fredoka-one-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/fredoka-one-v7-latin-regular.svg#FredokaOne') format('svg'); /* Legacy iOS */
+       }

@@ -1,0 +1,15 @@
+.bg-dialog {
+    background-color: color(bg-1) !important;
+    opacity: $opacity-tiny;
+    user-select: none;
+}
+
+.modal-input {
+    background-color: color(bg-1);
+    color: color(fg-1);
+    border-radius: 0.2rem;
+
+    &:focus {
+        outline: none;
+    }
+}

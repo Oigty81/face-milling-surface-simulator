@@ -1,0 +1,59 @@
+h1, .header-text-1 {
+    font-size: font-size(sm);
+    font-family: font-family(font-1);
+    color: color(warning-0);
+    
+    @media only screen and (min-width: $mobile-device-breakpoint) {
+        font-size: font-size(xl);
+    }
+}
+
+h2, .header-text-2 {
+    font-size: font-size(lg);
+    font-family: font-family(font-0);
+    color: color(fg-1);
+
+    @media only screen and (min-width: $mobile-device-breakpoint) {
+        font-size: font-size(lg);
+    }
+}
+
+h3, .header-text-3, td {
+    font-size: font-size(sm);
+    font-family: font-family(font-0);
+    color: color(fg-1);
+
+    @media only screen and (min-width: $mobile-device-breakpoint) {
+        font-size: font-size(md);
+    }
+}
+
+p, span {
+    font-size: font-size(xs);
+    font-family: font-family(font-0);
+    color: color(fg-1);
+
+    @media only screen and (min-width: $mobile-device-breakpoint) {
+        font-size: font-size(sm);
+    }
+}
+
+.nc-text {
+    font-family: font-family(font-2) !important;
+}
+
+.text-success {
+    color: color(success-0) !important;
+}
+
+.text-danger {
+    color: color(danger-0) !important;
+}
+
+.text-warning {
+    color: color(warning-0) !important;
+}
+
+.text-info {
+    color: color(info-0) !important;
+}

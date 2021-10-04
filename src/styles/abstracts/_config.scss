@@ -1,0 +1,11 @@
+// parameters for mobile layout
+$mobile-device-breakpoint: 768px;
+
+// global style setting for ui-components
+$current-control-style-primary-bg: color(bg-2);
+$current-control-style-primary-bg-opacity: $opacity-tiny;
+$current-control-style-primary-text-color: color(fg-1);
+$current-control-style-primary-text-color-hover: color(fg-0);
+$current-control-style-primary-font-size: font-size(md);
+$current-control-style-primary-font-size-mobile: font-size(sm);
+$current-control-style-primary-font-family: font-family(font-0);

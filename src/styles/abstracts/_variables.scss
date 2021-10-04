@@ -1,0 +1,43 @@
+$colors: (
+    bg-0: #3b0100,
+    bg-1: #540706,
+    bg-2: #7d0200,
+    bg-dark-trans-1: #2000002f,
+    bg-light-trans-1: #e0070080,
+    bg-light-trans-2: #f02a3e27,  
+    fg-0: #ffffff,
+    fg-1: #d0d0d0,
+    danger-0: #ff0000,
+    success-0: #00ff00,
+    warning-0: #e0c000,
+    info-0: #3030e0,
+    shadow-0: #404040,
+    shadow-1: #d0d0d0,
+    border-0: #c0c0c04f,
+    border-1: #e0e0e04f,
+    border-1-hover: #e0e0e0e0,
+);
+
+$font-sizes: (
+    xl: 1.3rem,
+    lg: 1.1rem,
+    md: 0.9rem,
+    sm: 0.75rem,
+    xs: 0.55rem
+);
+
+$base-font-stack: (
+    font-0: (Arial, Helvetica, sans-serif),
+    font-1: ('Fredoka One', cursive),
+    font-2: ('Courier Prime', monospace),
+);
+
+$hover-transition-time: 0.233s;
+
+$opacity-full: 0.00;
+$opacity-many: 0.15;
+$opacity-more: 0.33;
+$opacity-half: 0.50;
+$opacity-less: 0.66;
+$opacity-tiny: 0.85;
+$opacity-none: 1.00;

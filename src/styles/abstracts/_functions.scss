@@ -1,0 +1,14 @@
+// get color value by color variable name
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+// get font-size value by font-size variable name
+@function font-size($size) {
+    @return map-get($font-sizes, $size);
+}
+
+// get font-family value by font-family variable name
+@function font-family($font-number) {
+    @return map-get($base-font-stack, $font-number);
+}

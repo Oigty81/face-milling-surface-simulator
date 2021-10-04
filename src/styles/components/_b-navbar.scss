@@ -1,0 +1,64 @@
+.navbar-brand {
+    user-select: none;
+}
+
+.bg-navbar {
+    background-color: color(bg-light-trans-1) !important;
+    padding: 0px 1rem;
+}
+
+.nav-link {
+    color: color(fg-1)!important;
+    transition: color 0.17s ease-in 0s;
+    &:hover {
+        color: color(fg-0)!important;
+    }    
+}
+
+li.nav-item {
+    border: unset;
+    background-color: transparent !important;
+    font-size: font-size(lg);
+    font-family: font-family(font-0);
+    font-weight: bold;
+    margin: 0 0.33rem;
+    letter-spacing: -0.033rem;
+    border-top: 1px solid color(border-0);
+    
+    @media only screen and (min-width: $mobile-device-breakpoint) {
+        font-size: font-size(md);
+        border-top: unset;
+    }
+}
+
+@keyframes spin-logo-1 { 
+    25%     { transform: rotate(3*360deg); }
+    50%     { transform: rotate(5*360deg); }
+    75%     { transform: rotate(9*360deg); }
+    100%    { transform: rotate(10*360deg); }
+}
+
+@keyframes spin-logo-2 { 
+    25%     { transform: rotate(1*360deg); }
+    50%     { transform: rotate(6*360deg); }
+    75%     { transform: rotate(8*360deg); }
+    100%    { transform: rotate(10*360deg); }
+} 
+
+.img-logo {
+    &-1, &-2 {
+        width: 16px;
+
+        @media only screen and (min-width: $mobile-device-breakpoint) {
+            width: 40px;
+        }
+    }
+    
+    &-1 {
+        animation:spin-logo-1 8s linear infinite;
+    }
+    
+    &-2 {
+        animation:spin-logo-2 8s linear infinite;
+    }
+}

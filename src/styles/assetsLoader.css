@@ -1,0 +1,7 @@
+.determine-drawing-origin-canvas {
+    cursor: url('../assets/crosshair.png') 16 16, pointer;
+}
+
+.determine-drawing-relation-canvas {
+    cursor: url('../assets/crosshair.png') 16 16, pointer;
+}

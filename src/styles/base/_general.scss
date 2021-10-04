@@ -1,0 +1,28 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: font-family(font-0);
+    background-color: color(bg-0);
+    color: color(fg-0);
+    overflow-y: hidden;
+}
+
+.hr-line-white {
+    border: 0.05rem solid color(fg-1);
+    margin: 0.15rem 0;
+}
+
+.hr-line-white-lg {
+    border: 0.5rem solid color(bg-2);
+    margin: 0.65rem 0;
+}
+
+.img-help {
+    width: 100%;
+    height: auto;
+}

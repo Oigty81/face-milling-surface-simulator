@@ -1,0 +1,36 @@
+.simplebar-vertical .simplebar-scrollbar:before {
+  background: repeating-linear-gradient(
+      0deg,
+      black, gray 3px, blue 1px, #cccccc 2px
+  ) !important;
+  border-radius: 6px;
+}
+
+.simplebar-horizontal .simplebar-scrollbar:before {
+  background: repeating-linear-gradient(
+      90deg,
+      black, gray 3px, blue 1px, #cccccc 2px
+  ) !important;
+  border-radius: 6px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 0.5 !important;
+  transition: opacity 300ms ease-in !important;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 16px !important;
+  right: 1px !important;
+  margin-bottom: 16px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  height:  14px !important;
+}
+
+.simplebar-track.simplebar-horizontal {
+  height:  15px !important;
+  bottom: 1px !important;
+  margin-right: 16px;
+}

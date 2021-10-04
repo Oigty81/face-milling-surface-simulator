@@ -1,0 +1,27 @@
+.determine-drawing-relation-wrapper-container {
+    box-shadow: 0 0 0.5rem color(shadow-0);
+    border: 1px solid color(border-0);
+}
+
+.determine-drawing-relation-canvas {
+    background-color: #00000000;
+    display: block;
+}
+
+.drawing-relation-tooltip {
+    position: absolute;
+    top:10px;
+    left:0px;
+    min-width: 160px;
+    white-space: nowrap;
+    min-height: 60px;
+    background-color: color(bg-light-trans-1);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.drawing-relation-tooltip-text {
+    user-select: none;
+    color: color(warning-0);
+}

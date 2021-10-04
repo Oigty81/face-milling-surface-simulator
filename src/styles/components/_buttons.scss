@@ -1,0 +1,21 @@
+.button-column-width {
+    @include control-style-primary();
+
+    width: 100%;
+    min-height: 2.625rem;
+}
+
+.button-fontawesome-icon {
+    @include control-style-primary();
+    
+    width: 100%;
+    height: 50px;
+    font-size: 1.8rem !important;
+}
+
+.button-color-picker {
+    @include control-style-primary();
+    
+    min-height: 32px;
+    width: 48px;
+}

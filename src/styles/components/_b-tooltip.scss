@@ -1,0 +1,32 @@
+.tooltip-color-info-box > .arrow {
+    display:none;
+}
+
+.tooltip-color-info-box > .tooltip-inner {
+    min-width: 60px !important;
+    max-width: 480px !important;
+    cursor: default;
+    user-select: none;
+    padding: 0;
+
+    @media only screen and (min-width: $mobile-device-breakpoint) {
+        min-width: 100px !important;
+        max-width: 800px !important;
+    }
+}
+
+.tooltip-color-info-box > .tooltip-inner {
+    background-color: color(bg-dark-trans-2) !important;
+    border: 1px color(border-1) solid;
+    border-radius: 0.12rem;
+    padding: 0.6rem;
+}
+
+.tooltip-color-info-box > .tooltip-inner p {
+    color: color(warning-0) !important;
+    font-size: font-size(xs);
+
+    @media only screen and (min-width: $mobile-device-breakpoint) {
+        font-size: font-size(sm);
+    }
+}

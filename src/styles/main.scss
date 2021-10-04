@@ -1,0 +1,39 @@
+// import bootstrap with modify variables
+@import './vendors-extensions/bootstrap-mod-interface';
+
+// import from node_modules installed styles
+@import '~bootstrap-vue/dist/bootstrap-vue.min.css';
+@import '~simplebar/dist/simplebar.min.css';
+
+// import static vendor style
+@import '../vendor/fontawesome/css/all.css';
+@import '../vendor/fonts/initialize-font-faces.css';
+
+// import and override static vendor style
+@import './vendors-extensions/simplebar';
+
+// load assets for style from a regular css file
+@import './assetsLoader.css';
+
+// import project style modules
+@import './abstracts/variables';
+@import './abstracts/functions';
+@import './abstracts/config';
+@import "./abstracts/mixins";
+
+@import './base/reset';
+@import './base/general';
+@import './base/typography';
+
+@import './components/b-navbar';
+@import './components/b-tooltip';
+@import './components/buttons';
+@import './components/colorPicker';
+@import './components/console';
+@import './components/containers';
+@import './components/determineDrawingOrigin';
+@import './components/determineDrawingRelation';
+@import './components/imageButton';
+@import './components/modal';
+@import './components/ncRenderDisplay';
+@import './components/upload';

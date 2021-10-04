@@ -1,0 +1,43 @@
+@keyframes anima-cloud {
+    0%   {color: #202020}
+    25%  {color: #404040;}
+    50%  {color: #a0a0a0;}
+    100% {color: #e0e0e0;}
+}
+
+.file-upload-drop-n-down {
+    height: 2.625rem;
+    background-color: $current-control-style-primary-bg;
+    color: color(fg-2);
+    transition: all $hover-transition-time ease-in 0s;
+    border: 1px dashed color(border-1);
+    border-radius: 0.2rem;
+    &:hover {
+        border: 1px dashed color(border-1-hover);
+        box-shadow: 0px 0px 6px color(shadow-1);
+    }
+}
+
+.file-upload-drop-n-down-mouse-drag {
+    & > h3, & > p {
+        animation-name: anima-cloud;
+        animation-duration: 0.1s;
+        animation-direction: alternate;
+        animation-iteration-count:infinite;
+    }
+}
+
+.file-upload-drop-n-down { 
+    & > h3, & > p {
+        transition: all 0.5s ease-in 0s;
+    }
+}
+
+.file-upload-drop-n-down-draghover {
+    background-color: color(bg-light-trans-2);
+
+    & > h3, & > p {
+        color: color(fg-2);
+        text-shadow: 1px 0px 1px color(shadow-0);
+    }
+}
