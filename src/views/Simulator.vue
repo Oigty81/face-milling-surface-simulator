@@ -60,7 +60,7 @@
                         @clickSettings="clickSettings()"
                     ></ProfileController>
                 </div>
-                <div class="col-lg px-1 pb-2">
+                <div class="col-xl px-1 pb-2">
                     <UpAndDownloadController
                         @clickResetProfile="clickResetProfile()"
                         @clickDownloadProfile="clickDownloadProfile()"
