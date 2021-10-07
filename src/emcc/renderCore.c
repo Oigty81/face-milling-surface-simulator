@@ -292,7 +292,6 @@ int GenerateSprites() {
 
 	/* 
 	** create roughness line
-	** todo: later calculate rougness from numeric control point to point
 	*/
 	innerWidth = radiusMillTool - strokeWidthRoughnessLine;
 
