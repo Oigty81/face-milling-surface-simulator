@@ -4,7 +4,7 @@
             <div class="row px-2">
                 <div class="col-lg px-1">
                     <NcRenderDisplayAutoResizeWrapper
-                        :viewportRelation="1.9"
+                        :viewportRelation="2.2"
                         :ncRenderParameter="ncRenderParameter"
                         :isEnabledMillTool="true"
                         :renderLineOption="4"
@@ -25,8 +25,8 @@
             </div>
         </div>
         <div class="col-xl-5 px-3">
-            <div class="row px-2">
-                <div class="col-xl px-1 pb-3">
+            <div class="row">
+                <div class="col">
                     <NcController
                         :ledGlowNcStart="ncRun"
                         :ledGlowNcStop="!ncRun"
@@ -38,7 +38,9 @@
                         @changeVelocity="setNcSimulationVelocity($event)"
                     ></NcController>
                 </div>
-                <div class="col-xl px-1 pb-3">
+            </div>
+            <div class="row">
+                <div class="col">
                     <RenderController
                         @clickZoomPositive="clickZoomPositive()"
                         @clickZoomNegative="clickZoomNegative()"
@@ -48,7 +50,9 @@
                         @clickDownloadCanvas="clickDownloadCanvas()"
                     ></RenderController>
                 </div>
-                <div class="col-xl px-1 pb-3">
+            </div>
+            <div class="row">
+                <div class="col">
                     <ProfileController
                         :ncOriginOnImage="profileData.imageOrigin"
                         :ncStartpoint="profileData.ncStartpoint"
@@ -60,7 +64,9 @@
                         @clickSettings="clickSettings()"
                     ></ProfileController>
                 </div>
-                <div class="col-xl px-1 pb-2">
+            </div>
+            <div class="row">
+                <div class="col">
                     <UpAndDownloadController
                         @clickResetProfile="clickResetProfile()"
                         @clickDownloadProfile="clickDownloadProfile()"

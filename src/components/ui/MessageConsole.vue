@@ -25,7 +25,6 @@
                     <td
                         class="table-col-message"
                         :class="{ 'first-entry': index === 0 && toggleFirstEntry, 'text-info': item.color === 0, 'text-success': item.color === 1, 'text-danger': item.color === 2}"
-                        style="min-width: 800px;"
                     >{{item.text}}</td>
                 </tr>
             </table>
