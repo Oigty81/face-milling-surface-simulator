@@ -1,8 +1,11 @@
 # face-milling-surface-simulator
-## ***!!! project describtion coming soon !!!***
 
 ![](./pagedemo.gif)
 
+## ***!!! project describtion coming soon !!!***
+# 
+## [TODO](TODO.md)
+# 
 ## Project setup
 
 ### Prerequisite
@@ -32,6 +35,3 @@ npm run test:unit
 ```
 
 # 
-
-
-## [TODO](TODO.md)
