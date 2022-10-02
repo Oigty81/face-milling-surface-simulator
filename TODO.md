@@ -10,6 +10,7 @@
     - [ ] draw and refresh is very slowly
     - [ ] sometimes after routing back to `/home` (from `Home/Settings` or `/Help`) the content of main-canvas is disappeared
 - [ ] better control support for use with mobil devices
+- [ ] migrate to Vue 3
 
 ### In Progress
 
