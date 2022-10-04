@@ -1,6 +1,7 @@
 ### Todo
 
 - [ ] feature for edit current CNC-Program in the WEB-APP memory directly
+- [ ] feature for default circular Interpolation with I- and J-addresses
 - [ ] add comments for some function and class headers
 - [ ] rewrite some vue components in typescript
 - [ ] the methode "getScrollElement" from package  "simplebar-vue"  is not supported by typescript yet, remove the lines '@ts-ignore' in "DetermineDrawingOriginAutoResizeWrapper.vue" and "DetermineDrawingRelationAutoResizeWrapper.vue" at the respective positions
