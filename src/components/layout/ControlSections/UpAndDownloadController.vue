@@ -11,7 +11,13 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="pl-1">
+                    <div v-if="appMode === 'APP'" class="pl-1">
+                        <button
+                            class="button-column-width mt-2"
+                            @click="clickDownloadProfile()"
+                        >Save Profile (json)</button>
+                    </div>
+                    <div v-else class="pl-1">
                         <button
                             class="button-column-width mt-2"
                             @click="clickDownloadProfile()"
@@ -19,7 +25,13 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="mt-2" id="profile-upload-box">
+                    <div v-if="appMode === 'APP'" class="pl-1">
+                        <button
+                            class="button-column-width mt-2"
+                            @click="intendLoadProfile()"
+                        >Load Profile (json)</button>
+                    </div>
+                    <div v-else class="mt-2" id="profile-upload-box">
                         <b-tooltip target="profile-upload-box" placement="top" delay="500" custom-class="tooltip-color-info-box" offset="100">
                             <p>drag a profile file (*.json) into this field</p>
                         </b-tooltip>
@@ -52,7 +64,13 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="pb-2 pl-1">
+                    <div v-if="appMode === 'APP'" class="pb-2 pl-1">
+                        <button
+                            class="button-column-width mt-2"
+                            @click="clickDownloadNcProgram()"
+                        >Save NC program (txt)</button>
+                    </div>
+                    <div v-else class="pb-2 pl-1">
                         <button
                             class="button-column-width mt-2"
                             @click="clickDownloadNcProgram()"
@@ -60,7 +78,13 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="mt-2" id="ncprogram-upload-box">
+                    <div v-if="appMode === 'APP'" class="pl-1">
+                        <button
+                            class="button-column-width mt-2"
+                            @click="intendLoadCncFile()"
+                        >Load NC program (txt)</button>
+                    </div>
+                    <div v-else class="mt-2" id="ncprogram-upload-box">
                         <b-tooltip target="ncprogram-upload-box" placement="top" delay="500" custom-class="tooltip-color-info-box" offset="100">
                             <p>drag a cnc program file (*.txt) into this field</p>
                         </b-tooltip>
@@ -92,6 +116,15 @@ export default {
             'uploadStateProfile',
             'uploadStateNcProgram',
         ]),
+    },
+    data: function () {
+        return {
+            appMode: 'WEB'
+        };
+    },
+    created() {
+        this.appMode = process.env.VUE_APP_APPMODE;
+        console.log("created: The component just got created.", this.appMode);
     },
     methods: {
         clickResetProfile() {
@@ -130,6 +163,12 @@ export default {
             if(event.currentTarget.id === 'file-upload-drop-n-down-ncprogram') {
                 this.$store.dispatch('CommonModule/uploadNcProgramFile', [...files]);
             }
+        },
+        intendLoadProfile() {
+            this.$store.dispatch('FileDataModule/intendLoadProfile');
+        },
+        intendLoadCncFile() {
+            this.$store.dispatch('FileDataModule/intendLoadCncFile');
         }
     },
     watch: {
