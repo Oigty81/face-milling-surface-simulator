@@ -26,13 +26,60 @@ export default Vue.extend({
         Navbar,
         ModalInfo
     },
-    created: function() {
+    created() {
         this.$store.dispatch('CommonModule/loadDemo', { profile: 'demo/profile1.json', ncProgram: 'demo/CNC_Demo1.txt' });
+        this.$store.dispatch("CommonModule/GenerateUrlGetQuery", window.location);
+        
+        if(process.env.VUE_APP_APPMODE === 'APP' && 'websocketport' in this.currentUrlGetQuery) {
+            this.webSocket = new WebSocket("ws://localhost:" + this.currentUrlGetQuery.websocketport);
+
+            this.webSocket.onopen = (event) => {
+                console.log("websocket connected :", event);
+                this.$store.dispatch('MessageConsoleModule/addMessage', { text: "websocket connected", color: 1 }, { root: true });
+            };
+
+            this.webSocket.onmessage = (event) => {
+                if (event.data) {
+                    console.log("websocket message:", event.data);
+                    this.$store.commit("CommonModule/ADD_WEBSOCKED_MESSAGE", event.data);
+                }
+            };
+
+            this.webSocket.onmessage = (event) => {
+                if (event.data) {
+                    const wsMessageObject = JSON.parse(event.data);
+                    if (wsMessageObject.type !== undefined && wsMessageObject.data !== undefined) {
+                        switch (wsMessageObject.type) {
+                            case 'message':
+                                //..
+                                break;
+                            case 'profiledata':
+                                this.$store.dispatch('MessageConsoleModule/addMessage', { text: "websocket message 'profiledata'", color: 1 }, { root: true });
+                                break;
+                            case 'imagedata':
+                                this.$store.dispatch('MessageConsoleModule/addMessage', { text: "websocket message 'imagedata'", color: 1 }, { root: true });
+                                break;
+                            case 'cncdata':
+                                this.$store.dispatch('MessageConsoleModule/addMessage', { text: "websocket message 'cncdata'", color: 1 }, { root: true });
+                                break;
+                            default:
+                                console.log("unknown websocket message type:", event.data);
+                                break;
+                        }
+                    }
+                }
+            };
+        }
     },
     computed: {
         ...mapGetters('CommonModule', [
-            'showModalInfo',
+            'showModalInfo', "currentUrlGetQuery",
         ]),
+    },
+    data: function () {
+        return {
+            webSocket: null
+        };
     },
     methods: {
         resizeNavbar(e) {
