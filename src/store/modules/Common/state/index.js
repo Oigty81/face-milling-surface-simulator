@@ -5,5 +5,6 @@ export const state = {
     uploadStateProfile: 0,
     uploadStateNcProgram: 0,
     uploadStateMainImage: 0,
-    uploadedMainImage: ''
+    uploadedMainImage: '',
+    currentUrlGetQuery: {},
 };

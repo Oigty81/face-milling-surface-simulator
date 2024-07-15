@@ -189,5 +189,30 @@ export const actions = {
             dispatch('MessageConsoleModule/addMessage', { text: ''.concat("error load demo demo profile: ").concat(error), color: 2 }, { root: true });
             dispatch('NcModule/clearNc', null, { root: true });
         });
-    }
+    },
+    GenerateUrlGetQuery({ commit }, url) {
+        const uriRaw = window.location.href.split('?');
+                
+        if(uriRaw.length === 2) {
+          const uri = uriRaw[1].split('/');
+          if(uri.length > 0) {
+            const vars = uri[0].replace('#', '').split('&');
+            const getVars = {};
+            let tmp = '';
+            vars.forEach(function(v) {
+                tmp = v.split('=');
+                if(tmp.length === 2) {
+                    getVars[tmp[0]] = tmp[1];
+                    //console.log(v);
+                }
+            });
+            //console.log("P:", getVars);
+            commit('SET_URL_GET_QUERY', getVars);
+          } else {
+            commit('SET_URL_GET_QUERY', []);
+          }
+        } else {
+            commit('SET_URL_GET_QUERY', []);
+        }
+    },
 };

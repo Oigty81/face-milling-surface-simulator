@@ -16,5 +16,8 @@ export const mutations = {
     },
     SET_UPLOADED_MAIN_IMAGE (state, payload) {
         state.uploadedMainImage = payload;
-    }
+    },
+    SET_URL_GET_QUERY (state, payload) {
+        state.currentUrlGetQuery = payload;
+    },
 };
