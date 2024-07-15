@@ -19,9 +19,8 @@
                 <b-navbar-nav class="ml-auto">
                     <b-nav-item href="#" @click="loadDemo1()"><i class="far fa-save"></i>{{'\xa0\xa0'}}Load Demo 1</b-nav-item>
                     <b-nav-item href="#" @click="loadDemo2()"><i class="far fa-save"></i>{{'\xa0\xa0'}}Load Demo 2</b-nav-item>
-                    <b-nav-item v-if="appMode === 'APP'" href="#">BAT</b-nav-item>
-                    <b-nav-item v-if="appMode === 'APP'" href="#" @click="minimizeApp()">Min</b-nav-item>
-                    <b-nav-item v-if="appMode === 'APP'" href="#" @click="quitApp()">EXIT</b-nav-item>
+                    <b-nav-item v-if="appMode === 'APP'" href="#" @click="minimizeApp()"><i class="far fa-window-minimize" style="font-size: 1.5rem;"></i></b-nav-item>
+                    <b-nav-item v-if="appMode === 'APP'" href="#" @click="quitApp()"><i class="fas fa-times" style="font-size: 1.5rem;"></i></b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
