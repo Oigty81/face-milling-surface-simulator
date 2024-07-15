@@ -19,6 +19,9 @@
                 <b-navbar-nav class="ml-auto">
                     <b-nav-item href="#" @click="loadDemo1()"><i class="far fa-save"></i>{{'\xa0\xa0'}}Load Demo 1</b-nav-item>
                     <b-nav-item href="#" @click="loadDemo2()"><i class="far fa-save"></i>{{'\xa0\xa0'}}Load Demo 2</b-nav-item>
+                    <b-nav-item v-if="appMode === 'APP'" href="#">BAT</b-nav-item>
+                    <b-nav-item v-if="appMode === 'APP'" href="#" @click="minimizeApp()">Min</b-nav-item>
+                    <b-nav-item v-if="appMode === 'APP'" href="#" @click="quitApp()">EXIT</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -31,6 +34,13 @@ import Component from 'vue-class-component';
 
 @Component({})
 export default class Navbar extends Vue {
+    public appMode!: string;
+
+    constructor() {
+        super();
+        this.appMode = process.env.VUE_APP_APPMODE;
+    }
+
     loadDemo1() {
         this.$store.dispatch('CommonModule/loadDemo', { profile: 'demo/profile1.json', ncProgram: 'demo/CNC_Demo1.txt' });
     }
@@ -41,6 +51,14 @@ export default class Navbar extends Vue {
     
     openModalInfo() {
         this.$store.commit('CommonModule/SET_MODAL_INFO', true, { root: true });
+    }
+
+    minimizeApp() {
+        this.$store.dispatch("UtilitiesModule/appMinimize");
+    }
+
+    quitApp() {
+        this.$store.dispatch("UtilitiesModule/appQuit");
     }
 }
 </script>

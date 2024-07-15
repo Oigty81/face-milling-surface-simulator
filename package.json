@@ -5,6 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "serve:app": "SET VUE_APP_APPMODE=APP&&vue-cli-service serve",
+    "build:app": "SET VUE_APP_APPMODE=APP&&vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
